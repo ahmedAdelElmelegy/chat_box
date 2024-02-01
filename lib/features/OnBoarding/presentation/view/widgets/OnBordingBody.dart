@@ -46,7 +46,7 @@ class OnBoardingBody extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: size.height * .05,
+                height: size.height * .01,
               ),
               const CustomText(
                 text: 'Connect friends \neasily & quickly',
@@ -55,7 +55,7 @@ class OnBoardingBody extends StatelessWidget {
                 fontSize: 64,
               ),
               SizedBox(
-                height: size.height * .05,
+                height: size.height * .01,
               ),
               const CustomText(
                 text:
@@ -65,14 +65,14 @@ class OnBoardingBody extends StatelessWidget {
                 fontWeight: FontWeight.w500,
               ),
               SizedBox(
-                height: size.height * .03,
+                height: size.height * .01,
               ),
               const CustomAllIconSignup(
                 color: Colors.black,
                 color2: Colors.white,
               ),
               SizedBox(
-                height: size.height * .03,
+                height: size.height * .01,
               ),
               CustomRowDivider(size: size, color: Colors.white),
               SizedBox(
