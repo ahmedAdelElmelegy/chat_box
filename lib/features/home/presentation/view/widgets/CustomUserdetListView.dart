@@ -16,6 +16,7 @@ class CustomUserdetListView extends StatelessWidget {
     return BlocBuilder<HomeCubit, HomeState>(
       builder: (context, state) {
         var cubit = HomeCubit.get(context);
+
         if (state is HomeLoading) {
           return const CustomLoading();
         } else if (state is HomeSucess) {
@@ -38,9 +39,11 @@ class CustomUserdetListView extends StatelessWidget {
         } else if (state is HomeFailed) {
           return Center(child: CustomText(text: state.errorMassage));
         } else {
-          return const CustomText(
-            text: 'erorr',
-            color: Colors.white,
+          return const Center(
+            child: CustomText(
+              text: 'erorr',
+              color: Colors.white,
+            ),
           );
         }
       },

@@ -1,9 +1,10 @@
-import 'package:bloc/bloc.dart';
+import 'package:chat_app/core/models/Chat_model.dart';
 import 'package:chat_app/core/models/UserModel.dart';
 import 'package:chat_app/core/utils/Constant.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:meta/meta.dart';
 
 part 'home_state.dart';
 
@@ -35,7 +36,13 @@ class HomeCubit extends Cubit<HomeState> {
     users.where((element) => element.name!.startsWith(userName)).toList();
     //search by the firsh key in user name
     emit(SearchSucess());
-    bool isSearch = false;
-    void searchTransfer() {}
+  }
+
+  bool isSearch = false;
+
+  void searchTransfer() {
+    isSearch = !isSearch;
+
+    emit(SearchSucess());
   }
 }

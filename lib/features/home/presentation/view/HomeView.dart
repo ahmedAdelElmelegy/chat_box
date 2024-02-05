@@ -9,7 +9,7 @@ class HomeView extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.black,
-      body: HomeViewBody(size: size),
+      body: SafeArea(child: HomeViewBody(size: size)),
     );
   }
 }

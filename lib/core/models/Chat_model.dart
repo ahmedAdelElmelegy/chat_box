@@ -2,7 +2,7 @@ class ChatModel {
   final String? message;
   final String? senderId;
   final String? reseverId;
-  final DateTime? dateTime;
+  final String? dateTime;
 
   ChatModel({this.message, this.senderId, this.reseverId, this.dateTime});
   factory ChatModel.fromJson(Map<String, dynamic> json) {

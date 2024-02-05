@@ -1,3 +1,4 @@
+import 'package:chat_app/core/Functions/Responsive_Text.dart';
 import 'package:chat_app/core/utils/Assets.dart';
 import 'package:chat_app/core/utils/go_router.dart';
 import 'package:chat_app/core/widgets/CustomText.dart';
@@ -48,20 +49,26 @@ class OnBoardingBody extends StatelessWidget {
               SizedBox(
                 height: size.height * .01,
               ),
-              const CustomText(
+              CustomText(
                 text: 'Connect friends \neasily & quickly',
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
-                fontSize: 64,
+                fontSize: RespText.getResponsiveFontSize(
+                  64,
+                  context,
+                ),
               ),
               SizedBox(
                 height: size.height * .01,
               ),
-              const CustomText(
+              CustomText(
                 text:
                     'Our chat app is the perfect way to stay\nconnected with friends and family.',
                 color: Colors.grey,
-                fontSize: 18,
+                fontSize: RespText.getResponsiveFontSize(
+                  18,
+                  context,
+                ),
                 fontWeight: FontWeight.w500,
               ),
               SizedBox(

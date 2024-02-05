@@ -17,4 +17,14 @@ final class HomeFailed extends HomeState {
 
 final class SearchSucess extends HomeState {}
 
-final class SearchTransferSucess extends HomeState {}
+final class SendMassageSucess extends HomeState {}
+
+final class SendMassageLoading extends HomeState {}
+
+final class SendMassageFailed extends HomeState {}
+
+final class GetMassagesSucess extends HomeState {}
+
+final class GetMassagesFailed extends HomeState {}
+
+final class GetMassagesLoading extends HomeState {}

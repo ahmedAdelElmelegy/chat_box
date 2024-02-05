@@ -1,11 +1,13 @@
+import 'package:chat_app/core/models/Chat_model.dart';
 import 'package:chat_app/core/widgets/CustomText.dart';
 import 'package:flutter/material.dart';
 
 class CustomMassageItem extends StatelessWidget {
   const CustomMassageItem({
     super.key,
+    required this.chatModel,
   });
-
+  final ChatModel chatModel;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -26,8 +28,8 @@ class CustomMassageItem extends StatelessWidget {
                       topRight: Radius.circular(20),
                       bottomRight: Radius.circular(20),
                       bottomLeft: Radius.circular(20))),
-              child: const CustomText(
-                text: "hellow pro",
+              child: CustomText(
+                text: chatModel.message!,
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
               )),

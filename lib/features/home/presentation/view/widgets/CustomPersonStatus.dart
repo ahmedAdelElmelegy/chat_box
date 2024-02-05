@@ -1,3 +1,4 @@
+import 'package:chat_app/core/Functions/Responsive_Text.dart';
 import 'package:chat_app/core/widgets/CustomText.dart';
 import 'package:flutter/material.dart';
 
@@ -6,11 +7,11 @@ class CustomPersonStatus extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.symmetric(horizontal: 10),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10),
       child: Column(
         children: [
-          CircleAvatar(
+          const CircleAvatar(
             radius: 32,
             backgroundColor: Colors.greenAccent,
             child: CircleAvatar(
@@ -23,7 +24,7 @@ class CustomPersonStatus extends StatelessWidget {
             text: 'Name',
             color: Colors.white,
             fontWeight: FontWeight.w600,
-            fontSize: 20,
+            fontSize: RespText.getResponsiveFontSize(20, context),
           )
         ],
       ),

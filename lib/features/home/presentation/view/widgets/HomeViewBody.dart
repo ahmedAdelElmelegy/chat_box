@@ -1,5 +1,4 @@
 import 'package:chat_app/core/widgets/Customsizebox.dart';
-import 'package:chat_app/features/home/presentation/view/widgets/CustomAppBarHome.dart';
 import 'package:chat_app/features/home/presentation/view/widgets/CustomAppbarSearch.dart';
 import 'package:chat_app/features/home/presentation/view/widgets/CustomPersonListView.dart';
 import 'package:chat_app/features/home/presentation/view/widgets/CustomUserdetListView.dart';
@@ -21,20 +20,16 @@ class HomeViewBody extends StatelessWidget {
         SliverToBoxAdapter(
           child: Column(
             children: [
-              const CustomSizeBox(
-                h: .03,
-              ),
               Column(
                 children: [
                   SizedBox(
-                    height: size.height * .07,
-                    child: const CustomAppBarSearch(),
-                  ),
+                      height: size.height * .07,
+                      child: const CustomAppBarSearch()),
                   const CustomSizeBox(
                     h: .03,
                   ),
                   SizedBox(
-                      height: size.height * .11,
+                      height: size.height * .12,
                       child: const CustomPersonListView()),
                   const CustomSizeBox(
                     h: .01,

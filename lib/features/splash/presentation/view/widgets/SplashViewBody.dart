@@ -1,4 +1,6 @@
 import 'package:chat_app/core/utils/Assets.dart';
+import 'package:chat_app/core/utils/Constant.dart';
+import 'package:chat_app/features/HomeNavgateBar/presentation/view/HomeNavgateBar.dart';
 import 'package:chat_app/features/OnBoarding/presentation/view/OnBoardingView.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +17,9 @@ class _SplashViewBodyState extends State<SplashViewBody> {
     Future.delayed(const Duration(seconds: 3), () {
       Navigator.push(context, MaterialPageRoute(
         builder: (context) {
-          return const OnBordingView();
+          return Constants.userId != null
+              ? const HomeNavigateBar()
+              : const OnBordingView();
         },
       ));
     });
