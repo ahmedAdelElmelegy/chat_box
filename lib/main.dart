@@ -2,10 +2,11 @@ import 'package:chat_app/core/utils/Constant.dart';
 
 import 'package:chat_app/features/HomeNavgateBar/presentation/manager/cubit/home_navagation_cubit.dart';
 import 'package:chat_app/features/Login/presentation/manager/cubit/login_cubit.dart';
+import 'package:chat_app/features/OnBoarding/presentation/manager/OnBording/on_bording_cubit.dart';
 import 'package:chat_app/features/SignUp/presentation/manager/cubit/sign_up_cubit.dart';
 import 'package:chat_app/features/home/presentation/manager/cubit/home_cubit.dart';
 import 'package:chat_app/features/home/presentation/manager/cubit/massages_cubit.dart';
-import 'package:chat_app/features/settings/presentation/manager/cubit/profile_cubit.dart';
+import 'package:chat_app/features/settings/presentation/manager/Profile_cubit/profile_cubit.dart';
 import 'package:chat_app/features/splash/presentation/view/SplashView.dart';
 import 'package:chat_app/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -51,6 +52,9 @@ class ChatBox extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => MassagesCubit(),
+        ),
+        BlocProvider(
+          create: (context) => OnBordingCubit(),
         ),
       ],
       child: const MaterialApp(

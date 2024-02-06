@@ -16,3 +16,5 @@ final class GetMassagesSucess extends MassagesState {}
 final class GetMassagesFailed extends MassagesState {}
 
 final class GetMassagesLoading extends MassagesState {}
+
+final class ScrollSucess extends MassagesState {}

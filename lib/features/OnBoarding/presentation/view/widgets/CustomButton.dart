@@ -28,6 +28,7 @@ class CustomBotton extends StatelessWidget {
         text: text,
         fontWeight: FontWeight.bold,
         color: color2,
+        fontSize: 20,
       ),
     );
   }

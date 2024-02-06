@@ -39,8 +39,13 @@ class SignUpCubit extends Cubit<SignUpState> {
       required String uid,
       required String phone}) async {
     emit(UserDataLoading());
-    UserModel user =
-        UserModel(email: email, name: name, phone: phone, uid: uid);
+    UserModel user = UserModel(
+        email: email,
+        name: name,
+        phone: phone,
+        uid: uid,
+        image:
+            'https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?w=740&t=st=1707257243~exp=1707257843~hmac=fb55a7d8492028700c658dfb79e1728987f7f89fffd2f81c55b1729f42b8c34a');
     FirebaseFirestore.instance
         .collection('users')
         .doc(uid)

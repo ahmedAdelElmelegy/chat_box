@@ -1,9 +1,11 @@
 import 'package:chat_app/features/HomeNavgateBar/presentation/manager/cubit/home_navagation_cubit.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HomeNavigateBar extends StatelessWidget {
-  const HomeNavigateBar({super.key});
+  const HomeNavigateBar({super.key, this.user});
+  final User? user;
 
   @override
   Widget build(BuildContext context) {

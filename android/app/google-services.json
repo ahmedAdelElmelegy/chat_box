@@ -14,7 +14,7 @@
       },
       "oauth_client": [
         {
-          "client_id": "432692636064-3f1sdipdauv3nb1ugdsllgipu21j1pid.apps.googleusercontent.com",
+          "client_id": "432692636064-7fc12qudjd8pbtioqf5d9v0nlm0f9aif.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
@@ -31,10 +31,10 @@
               "client_type": 3
             },
             {
-              "client_id": "432692636064-bre65ot187l1ca1n2q584aqjrs49iv5u.apps.googleusercontent.com",
+              "client_id": "432692636064-8u01je6g4tupcf1a7ftl0mpvlbkmviub.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.example.chatApp"
+                "bundle_id": "com.example.chatAdvanced.RunnerTests"
               }
             }
           ]
@@ -50,7 +50,15 @@
       },
       "oauth_client": [
         {
-          "client_id": "432692636064-3f1sdipdauv3nb1ugdsllgipu21j1pid.apps.googleusercontent.com",
+          "client_id": "432692636064-r5p2tboj8t5ssiirc903rbttk4hgb885.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.chat_app",
+            "certificate_hash": "f0414fbf445484f8582a2103d381545dcd1afd48"
+          }
+        },
+        {
+          "client_id": "432692636064-7fc12qudjd8pbtioqf5d9v0nlm0f9aif.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
@@ -67,10 +75,10 @@
               "client_type": 3
             },
             {
-              "client_id": "432692636064-bre65ot187l1ca1n2q584aqjrs49iv5u.apps.googleusercontent.com",
+              "client_id": "432692636064-8u01je6g4tupcf1a7ftl0mpvlbkmviub.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.example.chatApp"
+                "bundle_id": "com.example.chatAdvanced.RunnerTests"
               }
             }
           ]
@@ -86,7 +94,7 @@
       },
       "oauth_client": [
         {
-          "client_id": "432692636064-3f1sdipdauv3nb1ugdsllgipu21j1pid.apps.googleusercontent.com",
+          "client_id": "432692636064-7fc12qudjd8pbtioqf5d9v0nlm0f9aif.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
@@ -103,10 +111,10 @@
               "client_type": 3
             },
             {
-              "client_id": "432692636064-bre65ot187l1ca1n2q584aqjrs49iv5u.apps.googleusercontent.com",
+              "client_id": "432692636064-8u01je6g4tupcf1a7ftl0mpvlbkmviub.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.example.chatApp"
+                "bundle_id": "com.example.chatAdvanced.RunnerTests"
               }
             }
           ]

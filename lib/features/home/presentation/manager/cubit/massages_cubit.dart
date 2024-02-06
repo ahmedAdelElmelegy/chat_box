@@ -58,7 +58,7 @@ class MassagesCubit extends Cubit<MassagesState> {
           .collection('chats')
           .doc(reseverId)
           .collection('Massages')
-          .orderBy('dateTime')
+          .orderBy('dateTime', descending: true)
           .snapshots()
           .listen((event) {
         message.clear();
@@ -70,5 +70,13 @@ class MassagesCubit extends Cubit<MassagesState> {
     } catch (e) {
       emit(GetMassagesFailed());
     }
+  }
+
+  final ScrollController scrollController = ScrollController();
+
+  void animated() {
+    scrollController.animateTo(0,
+        duration: const Duration(milliseconds: 300), curve: Curves.bounceIn);
+    emit(ScrollSucess());
   }
 }

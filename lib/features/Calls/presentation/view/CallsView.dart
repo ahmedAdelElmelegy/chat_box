@@ -8,7 +8,7 @@ class CallView extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       backgroundColor: Colors.black,
-      body: CallViewBody(),
+      body: SafeArea(child: CallViewBody()),
     );
   }
 }

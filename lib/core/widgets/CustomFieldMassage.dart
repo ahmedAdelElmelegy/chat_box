@@ -38,7 +38,6 @@ class CustomTextField extends StatelessWidget {
           // prefixIcon: Icon(icon2),
           hintStyle: const TextStyle(color: Colors.grey),
           contentPadding: const EdgeInsets.fromLTRB(15, 10, 15, 10),
-          border: outineMethod(),
           enabledBorder: outineMethod(),
           focusedBorder: outineMethod()),
     );
@@ -47,6 +46,6 @@ class CustomTextField extends StatelessWidget {
   OutlineInputBorder outineMethod() {
     return OutlineInputBorder(
         borderRadius: BorderRadius.circular(10),
-        borderSide: const BorderSide(color: Colors.white));
+        borderSide: const BorderSide(color: Colors.grey));
   }
 }

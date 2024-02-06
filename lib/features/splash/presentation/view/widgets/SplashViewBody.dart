@@ -15,13 +15,11 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   @override
   void initState() {
     Future.delayed(const Duration(seconds: 3), () {
-      Navigator.push(context, MaterialPageRoute(
-        builder: (context) {
-          return Constants.userId != null
-              ? const HomeNavigateBar()
-              : const OnBordingView();
-        },
-      ));
+      Navigator.push(context, MaterialPageRoute(builder: (context) {
+        return Constants.userId != null
+            ? const HomeNavigateBar()
+            : const OnBordingView();
+      }));
     });
     super.initState();
   }

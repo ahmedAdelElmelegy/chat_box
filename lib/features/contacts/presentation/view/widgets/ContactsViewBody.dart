@@ -15,9 +15,6 @@ class ContactViewbody extends StatelessWidget {
         SliverToBoxAdapter(
           child: Column(
             children: [
-              const CustomSizeBox(
-                h: .03,
-              ),
               Column(
                 children: [
                   SizedBox(

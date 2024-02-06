@@ -3,7 +3,7 @@ import 'package:chat_app/core/widgets/CustomLoading.dart';
 import 'package:chat_app/core/widgets/CustomText.dart';
 import 'package:chat_app/core/widgets/Customsizebox.dart';
 import 'package:chat_app/features/home/presentation/view/widgets/CustomAppBarHome.dart';
-import 'package:chat_app/features/settings/presentation/manager/cubit/profile_cubit.dart';
+import 'package:chat_app/features/settings/presentation/manager/Profile_cubit/profile_cubit.dart';
 import 'package:chat_app/features/settings/presentation/view/widgets/CusotmUserSettings.dart';
 import 'package:chat_app/features/settings/presentation/view/widgets/CustomSettingItemField.dart';
 import 'package:flutter/material.dart';

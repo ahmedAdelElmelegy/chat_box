@@ -52,6 +52,7 @@ class CustomFieldSendMassage extends StatelessWidget {
                             message: messageController.text,
                             reseverId: user.uid!);
                         messageController.clear();
+                        cubit.animated();
                       },
                       icon: const Icon(
                         Icons.send,

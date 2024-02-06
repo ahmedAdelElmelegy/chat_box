@@ -5,6 +5,7 @@ import 'package:chat_app/core/widgets/Customsizebox.dart';
 import 'package:chat_app/features/home/presentation/manager/cubit/massages_cubit.dart';
 import 'package:chat_app/features/home/presentation/view/widgets/CustomAppBarMassageDet.dart';
 import 'package:chat_app/features/home/presentation/view/widgets/CustomMassageItem.dart';
+import 'package:chat_app/features/home/presentation/view/widgets/CustomMassageMyFriend.dart';
 import 'package:chat_app/features/home/presentation/view/widgets/Custom_field_Send_massage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -29,13 +30,21 @@ class MassageDetails extends StatelessWidget {
               return const CustomLoading();
             } else if (state is GetMassagesSucess) {
               return ListView.builder(
+                reverse: true,
+                controller: cubit.scrollController,
                 itemCount: cubit.message.length,
                 itemBuilder: (context, index) => Padding(
                   padding: const EdgeInsets.only(bottom: 15, left: 10, top: 10),
-                  child: Align(
-                    alignment: Alignment.topLeft,
-                    child: CustomMassageItem(chatModel: cubit.message[index]),
-                  ),
+                  child: cubit.message[index].senderId != user.uid
+                      ? Align(
+                          alignment: Alignment.topLeft,
+                          child: CustomMassageMyFriend(
+                              chatModel: cubit.message[index]))
+                      : Align(
+                          alignment: Alignment.topRight,
+                          child: CustomMassageItem(
+                              chatModel: cubit.message[index]),
+                        ),
                 ),
               );
             } else {

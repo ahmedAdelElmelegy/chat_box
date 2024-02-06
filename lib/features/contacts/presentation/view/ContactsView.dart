@@ -8,7 +8,7 @@ class ContactView extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       backgroundColor: Colors.black,
-      body: ContactViewbody(),
+      body: SafeArea(child: ContactViewbody()),
     );
   }
 }
