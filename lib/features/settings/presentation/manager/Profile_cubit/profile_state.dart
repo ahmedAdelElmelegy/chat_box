@@ -28,3 +28,9 @@ final class UplodeProfileImageLoading extends ProfileState {}
 final class UplodeProfileImageSucess extends ProfileState {}
 
 final class UplodeProfileImageFailed extends ProfileState {}
+
+final class OpenDrawer extends ProfileState {}
+
+final class ClosedDrawer extends ProfileState {}
+
+final class SignOutSucessState extends ProfileState {}

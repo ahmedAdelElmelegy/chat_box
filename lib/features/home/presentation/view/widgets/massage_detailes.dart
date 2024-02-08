@@ -47,9 +47,13 @@ class MassageDetails extends StatelessWidget {
                         ),
                 ),
               );
+            } else if (cubit.message.isEmpty) {
+              return const Center(
+                child: Text('No Massage  .....'),
+              );
             } else {
               return const Center(
-                child: Text('No Massages .....'),
+                child: Text('Loading .....'),
               );
             }
           },

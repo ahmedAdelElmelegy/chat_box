@@ -58,7 +58,9 @@ class ChatBox extends StatelessWidget {
         ),
       ],
       child: const MaterialApp(
-          debugShowCheckedModeBanner: false, home: SplashView()),
+        debugShowCheckedModeBanner: false,
+        home: SplashView(),
+      ),
     );
   }
 }

@@ -1,6 +1,7 @@
+import 'package:chat_app/core/widgets/CustomText.dart';
 import 'package:chat_app/core/widgets/Customsizebox.dart';
-import 'package:chat_app/features/home/presentation/view/widgets/CustomAppBarHome.dart';
 import 'package:chat_app/features/home/presentation/view/widgets/CustomUserdetListView.dart';
+import 'package:chat_app/features/settings/presentation/view/widgets/CustomAppbar.dart';
 import 'package:flutter/material.dart';
 
 class ContactViewbody extends StatelessWidget {
@@ -19,7 +20,7 @@ class ContactViewbody extends StatelessWidget {
                 children: [
                   SizedBox(
                     height: size.height * .07,
-                    child: const CustomAppBarHome(),
+                    child: const CustomAppBar(text: "Contacts"),
                   ),
                   const CustomSizeBox(
                     h: .03,

@@ -22,7 +22,7 @@ class LoginViewBody extends StatelessWidget {
         if (state is LoginFailed) {
           ScaffoldMessenger.of(context)
               .showSnackBar(SnackBar(content: Text(state.erorrMessage)));
-        } else if (state is LoginFailed) {
+        } else if (state is LoginSucess) {
           Navigator.push(
               context,
               MaterialPageRoute(
@@ -110,11 +110,11 @@ class LoginViewBody extends StatelessWidget {
                       cubit.loginUser(
                           email: emailController.text,
                           password: passwordController.text);
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const HomeNavigateBar(),
-                          ));
+                      // Navigator.push(
+                      //     context,
+                      //     MaterialPageRoute(
+                      //       builder: (context) => const HomeNavigateBar(),
+                      //     ));
                     }
                   },
                   color: const Color(0xff24786d),

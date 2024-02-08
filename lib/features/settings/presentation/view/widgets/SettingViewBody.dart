@@ -2,10 +2,11 @@ import 'package:chat_app/core/utils/Constant.dart';
 import 'package:chat_app/core/widgets/CustomLoading.dart';
 import 'package:chat_app/core/widgets/CustomText.dart';
 import 'package:chat_app/core/widgets/Customsizebox.dart';
-import 'package:chat_app/features/home/presentation/view/widgets/CustomAppBarHome.dart';
 import 'package:chat_app/features/settings/presentation/manager/Profile_cubit/profile_cubit.dart';
 import 'package:chat_app/features/settings/presentation/view/widgets/CusotmUserSettings.dart';
+import 'package:chat_app/features/settings/presentation/view/widgets/CustomAppbar.dart';
 import 'package:chat_app/features/settings/presentation/view/widgets/CustomSettingItemField.dart';
+import 'package:chat_app/features/settings/presentation/view/widgets/EditProfile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -32,7 +33,18 @@ class SettingsViewBody extends StatelessWidget {
                   children: [
                     SizedBox(
                       height: size.height * .07,
-                      child: const CustomAppBarHome(),
+                      child: CustomAppBar(
+                        text: "Settings",
+                        icon: Icons.edit,
+                        icon2: Icons.arrow_back,
+                        onPressed2: () {
+                          Navigator.push(context, MaterialPageRoute(
+                            builder: (context) {
+                              return EditProfile();
+                            },
+                          ));
+                        },
+                      ),
                     ),
                     const CustomSizeBox(
                       h: .03,

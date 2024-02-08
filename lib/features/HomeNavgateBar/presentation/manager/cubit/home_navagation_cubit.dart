@@ -39,7 +39,7 @@ class HomeNavagationCubit extends Cubit<HomeNavagationState> {
         selectedIcon: Icon(IconlyBold.setting),
         label: 'Settings'),
   ];
-  List<Widget> pages = const [
+  List<Widget> pages = [
     HomeView(),
     CallView(),
     ContactView(),

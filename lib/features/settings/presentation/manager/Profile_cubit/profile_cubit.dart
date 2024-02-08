@@ -4,12 +4,16 @@ import 'package:bloc/bloc.dart';
 import 'package:chat_app/core/models/UserModel.dart';
 import 'package:chat_app/core/utils/Constant.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:image_picker/image_picker.dart';
 
 import 'package:meta/meta.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 part 'profile_state.dart';
 
@@ -91,6 +95,31 @@ class ProfileCubit extends Cubit<ProfileState> {
               });
     } catch (e) {
       UplodeProfileImageFailed();
+    }
+  }
+
+  GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
+  void openDarawer() {
+    scaffoldKey.currentState!.openDrawer();
+    getProfileData();
+    emit(OpenDrawer());
+  }
+
+  void closeDrawer() {
+    scaffoldKey.currentState!.closeDrawer();
+    emit(ClosedDrawer());
+  }
+
+  Future<void> logout() async {
+    try {
+      await FirebaseAuth.instance.signOut();
+      GoogleSignIn googleSignIn = GoogleSignIn();
+      await googleSignIn.signOut();
+      SharedPreferences shared = await SharedPreferences.getInstance();
+      await shared.clear();
+      emit(SignOutSucessState());
+    } catch (e) {
+      print('erorr in logout');
     }
   }
 }

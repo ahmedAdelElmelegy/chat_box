@@ -21,7 +21,8 @@ class CustomUserSetting extends StatelessWidget {
             backgroundColor: Colors.greenAccent,
             child: CircleAvatar(
               radius: 30,
-              backgroundImage: NetworkImage(user.image!),
+              backgroundImage: NetworkImage(user.image ??
+                  'https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?w=740&t=st=1707257243~exp=1707257843~hmac=fb55a7d8492028700c658dfb79e1728987f7f89fffd2f81c55b1729f42b8c34a'),
             ),
           ),
           Padding(

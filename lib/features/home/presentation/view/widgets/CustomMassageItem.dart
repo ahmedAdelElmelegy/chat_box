@@ -1,4 +1,5 @@
 import 'package:chat_app/core/models/Chat_model.dart';
+import 'package:chat_app/core/utils/Constant.dart';
 import 'package:chat_app/core/widgets/CustomText.dart';
 import 'package:flutter/material.dart';
 
@@ -31,10 +32,10 @@ class CustomMassageItem extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               )),
         ),
-        const CircleAvatar(
+        CircleAvatar(
           radius: 25,
-          backgroundImage: NetworkImage(
-              'https://img.freepik.com/free-photo/close-up-portrait-young-man-isolated-black-wall-real-emotions-male-model-smiling-feeling-happy-facial-expression-pure-clear-human-emotions-concept_155003-28037.jpg?size=626&ext=jpg&ga=GA1.2.1404103646.1692976429&semt=ais'),
+          backgroundImage:
+              NetworkImage(chatModel.image ?? Constants.defaultImage),
         ),
       ],
     );

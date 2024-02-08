@@ -15,10 +15,12 @@ class MassagesCubit extends Cubit<MassagesState> {
 
   void sendMassage({required String message, required String reseverId}) async {
     emit(SendMassageLoading());
+
     ChatModel chat = ChatModel(
         message: message,
         dateTime: DateTime.now().toString(),
         senderId: Constants.userId,
+        image: Constants.defaultImage,
         reseverId: reseverId);
     await FirebaseFirestore.instance
         .collection("users")

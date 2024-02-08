@@ -43,8 +43,9 @@ class EditProfile extends StatelessWidget {
                       cubit.profileImage == null
                           ? CircleAvatar(
                               radius: 50,
-                              backgroundImage:
-                                  NetworkImage(cubit.userdata!.image!),
+                              backgroundImage: NetworkImage(cubit
+                                      .userdata?.image ??
+                                  'https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?w=740&t=st=1707257243~exp=1707257843~hmac=fb55a7d8492028700c658dfb79e1728987f7f89fffd2f81c55b1729f42b8c34a'),
                             )
                           : CircleAvatar(
                               radius: 50,
